@@ -52,9 +52,9 @@ export default function Header() {
           <Img fluid={image.sharp.fluid} alt="C&amp;N Logo" />
         </Logo>
         <StyledNav>
-          <StyledLink to="#nosotros">Nosotros</StyledLink>
-          <StyledLink to="#soluciones">Soluciones</StyledLink>
-          <StyledContact to="#footer" className="button">
+          {/* <StyledLink to="#nosotros">Nosotros</StyledLink> */}
+          <StyledLink to="#servicios">Servicios</StyledLink>
+          <StyledContact to="#contacto" className="button">
             Contáctanos
           </StyledContact>
         </StyledNav>

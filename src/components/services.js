@@ -59,7 +59,7 @@ const Services = () => {
   `)
 
   return (
-    <section>
+    <section id="servicios">
       <div className="title-deco"></div>
       <h2 className="title-head">Nuestros Servicios</h2>
       <div className="service-container">

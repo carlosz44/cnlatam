@@ -18,13 +18,15 @@ const FooterBg = styled(BackgroundImage)`
 `
 const FooterWrapper = styled.div`
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 5rem;
+  padding-bottom: 12rem;
   max-width: 1200px;
   display: flex;
   @media (max-width: 768px) {
     flex-direction: column;
+    padding: 0 1rem;
   }
-`;
+`
 const FooterCol = styled.div`
   padding: 0 2rem;
   ul li svg {
@@ -51,7 +53,7 @@ const Footer = () => {
   `)
 
   return (
-    <footer>
+    <footer id="contacto">
       <FooterBg tag="section" fluid={image.sharp.fluid} fadeIn="soft">
         <div className="footer-deco"></div>
         <h2 className="title-head">Contáctanos</h2>
