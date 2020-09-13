@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `C&N Latam`,
-    description: `Gatsby landing page.`,
+    title: `C&N Contenidos y Noticias`,
+    description: `Soluciones Audiovisuales.`,
     author: `carlosamoros.com`,
   },
   plugins: [
