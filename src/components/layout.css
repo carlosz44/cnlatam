@@ -37,10 +37,6 @@ section {
   margin: 10rem auto;
   max-width: 1200px;
 }
-footer {
-  margin: 0 auto;
-  max-width: 1200px;
-}
 audio,
 canvas,
 progress,
@@ -298,7 +294,6 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -308,6 +303,7 @@ ul {
   margin-bottom: 1.45rem;
   list-style-position: outside;
   list-style-image: none;
+  list-style-type: none;
 }
 ol {
   margin-left: 1.45rem;
@@ -443,6 +439,8 @@ th {
 }
 li {
   margin-bottom: calc(1.45rem / 2);
+  color: #fafafa;
+
 }
 ol li {
   padding-left: 0;
@@ -557,6 +555,48 @@ pre tt:after {
 }
 .title-head {
   margin-bottom: 10rem;;
+}
+.footer-deco {
+  width: 8rem;
+  height: 1rem;
+  background-color: #fafafa;
+  margin: 2rem auto;
+}
+@media (min-width: 768px) {
+  .service-container {
+    position: relative;
+  }
+  .grey-bar {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 0.7rem;
+    background-color: #c4c4c4;
+    border-radius: 10rem;
+  }
+  .bar-deco-top {
+    position: absolute;
+    left: 49.66%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #c4c4c4;
+    border-radius: 10rem;
+  }
+  .bar-deco-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 49.66%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #c4c4c4;
+    border-radius: 10rem;
+  }
+}
+@media (min-width: 1205px) {
+  .bar-deco-top, .bar-deco-bottom {
+    left: 49.67%!important;
+  }
+
 }
 @media (max-width: 768px) {
   .service-mobile {

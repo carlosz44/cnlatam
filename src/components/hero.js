@@ -28,17 +28,17 @@ const StyledLink = styled(Link)`
 `
 
 export default function Hero () {
-    const { image } = useStaticQuery(graphql`
-      query {
-        image: file(relativePath: { eq: "bg-hero.png" }) {
-          sharp: childImageSharp {
-            fluid(quality: 99) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+  const { image } = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "bg-hero.png" }) {
+        sharp: childImageSharp {
+          fluid(quality: 99) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-    `)
+    }
+  `)
   
   return (
     <HeroBg tag="section" fluid={image.sharp.fluid} fadeIn="soft">
@@ -50,4 +50,3 @@ export default function Hero () {
     </HeroBg>
   )
 }
-
