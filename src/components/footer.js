@@ -1,4 +1,5 @@
 import React from 'react'
+import Form from "./form"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "@emotion/styled"
@@ -73,7 +74,7 @@ const Footer = () => {
               {/* TODO: mapa */}
             </div>
           </FooterCol>
-          <FooterCol>formulario</FooterCol>
+          <FooterCol><Form /></FooterCol>
         </FooterWrapper>
         <div style={{ textAlign: "center", color: "#fafafa" }}>
           © {new Date().getFullYear()}

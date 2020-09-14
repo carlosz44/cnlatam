@@ -9,17 +9,22 @@ const HeroBg = styled(BackgroundImage)`
   height: 70vh;
   background-position: cover;
   background-repeat: no-repeat;
-  p {
-    font-size: 2.4rem;
-  }
 `
 const HeroText = styled.div`
   color: #fafafa;
   height: 100%;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  h1 {
+    text-align: center;
+  }
+  p {
+    font-size: 2.4rem;
+    text-align: center;
+  }
 `
 const StyledLink = styled(Link)`
   margin-top: 4rem;

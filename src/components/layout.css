@@ -129,9 +129,23 @@ button,
 input {
   overflow: visible;
 }
+input {
+  width: 100%;
+  border: none;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  background-color: #836666;
+  color: #fafafa;
+}
 button,
 select {
   text-transform: none;
+  border-style: none;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 20rem!important;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 [type="reset"],
 [type="submit"],
@@ -386,13 +400,7 @@ blockquote {
   margin-bottom: 1.45rem;
 }
 form {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  margin: 0 auto;
   margin-bottom: 1.45rem;
 }
 noscript {
@@ -601,5 +609,14 @@ pre tt:after {
 @media (max-width: 768px) {
   .service-mobile {
     flex-direction: column-reverse!important;
+  }
+  h1, h2, h3 {
+    font-size: 2.8rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  form {
+    padding: 10rem 0;
   }
 }
