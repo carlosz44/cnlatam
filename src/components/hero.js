@@ -6,7 +6,7 @@ import styled from "@emotion/styled"
 
 const HeroBg = styled(BackgroundImage)`
   margin-top: -16.4rem;
-  height: 70vh;
+  height: 80rem;
   background-position: cover;
   background-repeat: no-repeat;
 `

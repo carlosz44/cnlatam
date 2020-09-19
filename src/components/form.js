@@ -32,6 +32,7 @@ const Form = () => {
       {errors.name && "Ingrese su e-mail"}
       <input
         name="message"
+        className="form-message"
         placeholder="Mensaje"
         ref={register({
           required: "Ingrese su mensaje",
