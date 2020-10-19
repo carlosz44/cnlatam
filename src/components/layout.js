@@ -6,7 +6,6 @@ import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-
   return (
     <>
       <Helmet>

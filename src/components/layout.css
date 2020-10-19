@@ -2,12 +2,13 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -32,6 +33,7 @@ nav,
 section,
 summary {
   display: block;
+  transition: all 200ms ease-in;
 }
 section {
   margin: 10rem auto;
@@ -60,6 +62,7 @@ a {
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
   color: #c13927;
+  transition: all 500ms ease-in;
 }
 a:active,
 a:hover {
@@ -79,13 +82,6 @@ dfn {
   font-style: italic;
 }
 h1 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
   text-rendering: optimizeLegibility;
@@ -144,7 +140,7 @@ select {
   border-style: none;
   padding: 1rem 2rem;
   width: 100%;
-  border-radius: 20rem!important;
+  border-radius: 20rem !important;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -449,7 +445,6 @@ th {
 li {
   margin-bottom: calc(1.45rem / 2);
   color: #fafafa;
-
 }
 ol li {
   padding-left: 0;
@@ -556,6 +551,15 @@ pre tt:after {
   border-radius: 1.8rem;
   color: #fafafa;
 }
+.header-bg {
+  background-color: rgba(51, 51, 51, 0.25);
+}
+.logo {
+  width: 10rem;
+}
+.logo-scrolled {
+  width: 7rem;
+}
 .title-deco {
   width: 8rem;
   height: 1rem;
@@ -563,7 +567,7 @@ pre tt:after {
   margin: 2rem auto;
 }
 .title-head {
-  margin-bottom: 10rem;;
+  margin-bottom: 10rem;
 }
 .footer-deco {
   width: 8rem;
@@ -605,16 +609,18 @@ pre tt:after {
   }
 }
 @media (min-width: 1205px) {
-  .bar-deco-top, .bar-deco-bottom {
-    left: 49.67%!important;
+  .bar-deco-top,
+  .bar-deco-bottom {
+    left: 49.67% !important;
   }
-
 }
 @media (max-width: 768px) {
   .service-mobile {
-    flex-direction: column-reverse!important;
+    flex-direction: column-reverse !important;
   }
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-size: 2.8rem;
   }
   p {
