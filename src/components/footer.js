@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import Form from "./form"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
@@ -23,6 +23,7 @@ const FooterWrapper = styled.div`
   padding-bottom: 12rem;
   max-width: 1200px;
   display: flex;
+  align-items: center;
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 0 1rem;
@@ -34,10 +35,14 @@ const FooterCol = styled.div`
     width: 1.8rem;
     margin-right: 1.5rem;
   }
-  
+
   @media (min-width: 768px) {
     width: 50%;
   }
+`
+const Map = styled.iframe`
+  border: none;
+  margin-top: 2rem;
 `
 
 const Footer = () => {
@@ -71,10 +76,18 @@ const Footer = () => {
               </li>
             </ul>
             <div>
-              {/* TODO: mapa */}
+              <Map
+                width="100%"
+                height="320"
+                scrolling="no"
+                title="Contenidos y Noticias"
+                src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=Av%20Ricardo%20Palma%20341%20Miraflores%20Lima+(Contenidos%20y%20Noticias)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              />
             </div>
           </FooterCol>
-          <FooterCol><Form /></FooterCol>
+          <FooterCol>
+            <Form />
+          </FooterCol>
         </FooterWrapper>
         <div style={{ textAlign: "center", color: "#fafafa" }}>
           © {new Date().getFullYear()}
@@ -92,4 +105,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default Footer

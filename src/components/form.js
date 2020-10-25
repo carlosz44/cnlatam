@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react"
 import { useForm } from "react-hook-form"
 
 const Form = () => {
-    const { register, errors, handleSubmit } = useForm()
-    const onSubmit = values => {
-      // form is valid
-      console.log(values)
-    }
-  
+  const { register, errors, handleSubmit } = useForm()
+  const onSubmit = values => {
+    // form is valid
+    // TODO: Funcionamiento form, color de mensajes de error
+    console.log(values)
+  }
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <input
@@ -47,4 +48,4 @@ const Form = () => {
   )
 }
 
-export default Form;
+export default Form

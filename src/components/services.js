@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, useStaticQuery } from "gatsby"
+import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 
 const Servicio = styled.article`
   display: flex;
@@ -29,7 +30,7 @@ const Servicio = styled.article`
 `
 const StyledImg = styled.img`
   padding: 0 5rem;
-`;
+`
 
 const Services = () => {
   const query = useStaticQuery(graphql`
@@ -58,14 +59,26 @@ const Services = () => {
     }
   `)
 
+  const [scroll, setScroll] = useState(0)
+
+  useScrollPosition(({ currPos }) => {
+    const scrolled = 100 * ((currPos.y + 800) / -1000)
+
+    if (scrolled > 0 && scrolled <= 100) {
+      setScroll(scrolled)
+    } else {
+      scrolled < 0 ? setScroll(0) : setScroll(100)
+    }
+  })
+
   return (
     <section id="servicios">
       <div className="title-deco"></div>
       <h2 className="title-head">Nuestros Servicios</h2>
       <div className="service-container">
-        <div className="grey-bar"></div>
-        <div className="bar-deco-top"></div>
-        <div className="bar-deco-bottom"></div>
+        <div className="progress-container">
+          <div className="progress" style={{ height: `${scroll}%` }} />
+        </div>
         <Servicio>
           <figure>
             <StyledImg
@@ -77,10 +90,10 @@ const Services = () => {
           <div>
             <h3>TI & Sistemas</h3>
             <p>
-              Consolidamos soluciones a la medida y necesidad de nuestros clientes
-              optimizando sus servicios en sus entornos consolidados donde se
-              mejora la alta disponibilidad de servicio para asegurar los SLA
-              comprometidos.
+              Consolidamos soluciones a la medida y necesidad de nuestros
+              clientes optimizando sus servicios en sus entornos consolidados
+              donde se mejora la alta disponibilidad de servicio para asegurar
+              los SLA comprometidos.
             </p>
           </div>
         </Servicio>
@@ -113,9 +126,9 @@ const Services = () => {
           <div>
             <h3>Broadcast</h3>
             <p>
-              Años de experiencia en la transmisión de señales audiovisuales y de
-              radiodifusión garantizan la calidad de nuestros servicios para la
-              cobertura de acontecimientos de trascendencia y todo tipo de
+              Años de experiencia en la transmisión de señales audiovisuales y
+              de radiodifusión garantizan la calidad de nuestros servicios para
+              la cobertura de acontecimientos de trascendencia y todo tipo de
               noticias.
             </p>
           </div>
@@ -125,4 +138,4 @@ const Services = () => {
   )
 }
 
-export default Services;
+export default Services
