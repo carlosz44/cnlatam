@@ -398,7 +398,7 @@ blockquote {
 }
 form {
   margin: 0 auto;
-  margin-bottom: 1.45rem;
+  padding-top: 5rem;
 }
 noscript {
   margin-left: 0;

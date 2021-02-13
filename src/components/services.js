@@ -62,7 +62,9 @@ const Services = () => {
   const [scroll, setScroll] = useState(0)
 
   useScrollPosition(({ currPos }) => {
-    const scrolled = 100 * ((currPos.y + 800) / -1000)
+    // console.log(currPos)
+    // console.log(scroll)
+    const scrolled = 100 * ((currPos.y + 790) / -2900)
 
     if (scrolled > 0 && scrolled <= 100) {
       setScroll(scrolled)
@@ -88,23 +90,20 @@ const Services = () => {
             />
           </figure>
           <div>
-            <h3>TI & Sistemas</h3>
+            <h3>Estudio de TV</h3>
             <p>
-              Consolidamos soluciones a la medida y necesidad de nuestros
-              clientes optimizando sus servicios en sus entornos consolidados
-              donde se mejora la alta disponibilidad de servicio para asegurar
-              los SLA comprometidos.
+              Contamos con un amplio catálogo de estudios de televisión,
+              implementados para satisfacer diferentes necesidades.
             </p>
           </div>
         </Servicio>
         <Servicio className="service-mobile">
           <div>
-            <h3>Seguridad TI</h3>
+            <h3>Unidad móvil y ENG </h3>
             <p>
-              Ponemos a su disposición múltiples herramientas de seguridad y
-              ciberseguridad para ayudar a asegurar la confidencialidad,
-              integridad o disponibilidad de los datos de su organización,
-              asegurando protección de amenazas internas y externas.
+              Cobertura de noticias, conferencias, conciertos o eventos
+              deportivos con unidades moviles, dentro y fuera del territorio
+              nacional.
             </p>
           </div>
           <figure>
@@ -124,14 +123,63 @@ const Services = () => {
             />
           </figure>
           <div>
-            <h3>Broadcast</h3>
+            <h3>Telepuerto</h3>
             <p>
-              Años de experiencia en la transmisión de señales audiovisuales y
-              de radiodifusión garantizan la calidad de nuestros servicios para
-              la cobertura de acontecimientos de trascendencia y todo tipo de
-              noticias.
+              Brindamos servicios de recepción y trasmisión de contenido
+              audiovisual, asi como acceso a internet vía satélite.
             </p>
           </div>
+        </Servicio>
+        <Servicio className="service-mobile">
+          <div>
+            <h3>DSNG y flyaway</h3>
+            <p>
+              Sistemas satelitales de rápido despliegue para la transmisión en
+              vivo de noticias y eventos de diverso genero, dentro y fuera del
+              territorio nacional.
+            </p>
+          </div>
+          <figure>
+            <StyledImg
+              src={query.seguridadImage.childImageSharp.fluid.src}
+              srcSet={query.seguridadImage.childImageSharp.fluid.srcSet}
+              alt="Seguridad TI"
+            />
+          </figure>
+        </Servicio>
+        <Servicio>
+          <figure>
+            <StyledImg
+              src={query.broadcastImage.childImageSharp.fluid.src}
+              srcSet={query.broadcastImage.childImageSharp.fluid.srcSet}
+              alt="Broadcast"
+            />
+          </figure>
+          <div>
+            <h3>Streaming</h3>
+            <p>
+              Sobre internet o plataformas privadas, distribuimos tu contenido
+              en vivo para ser visualizado en smartphones, laptops y tablets.
+            </p>
+          </div>
+        </Servicio>
+        <Servicio className="service-mobile">
+          <div>
+            <h3>Plataformas de TV Paga</h3>
+            <p>
+              {/* prettier-ignore */}
+              Soluciones llave en mano para operadores de servicios de tv paga,
+              vía redes IP (IPTV), satélite (DTH), fibra óptica (FTTH) o cable
+              (HFC).
+            </p>
+          </div>
+          <figure>
+            <StyledImg
+              src={query.seguridadImage.childImageSharp.fluid.src}
+              srcSet={query.seguridadImage.childImageSharp.fluid.srcSet}
+              alt="Seguridad TI"
+            />
+          </figure>
         </Servicio>
       </div>
     </section>
